@@ -9,32 +9,32 @@ function closeModal() {
 $(".form__singup").on("submit", function( event ) {
     event.preventDefault();
 
-    let name = $('#name-singup').val();
+    let user = $('#user-singup').val();
     let email = $('#email-singup').val();
     let password = $('#password-singup').val();
 
     $.ajax({
-        url: './process.php',
+        url: './register.php',
         method: 'POST',
-        data: {name: name, email: email, password: password},
-        dataType: 'JSON'
+        data: {user: user, email: email, password: password},
+        dataType: 'json',
     }).done(function(result){
         alert(result)
     })
 });
 
-$(".form__sin").on("submit", function( event ) {
+$(".form__singin").on("submit", function( event ) {
     event.preventDefault();
 
-    let name = $('#name-singup').val();
-    let email = $('#email-singup').val();
-    let password = $('#password-singup').val();
+    let user = $('#user-singin').val();
+    let email = $('#email-singin').val();
+    let password = $('#password-singin').val();
 
     $.ajax({
-        url: './process.php',
+        url: './verify_login.php',
         method: 'POST',
-        data: {name: name, email: email, password: password},
-        dataType: 'JSON'
+        data: {user: user, email: email, password: password},
+        dataType: 'json',
     }).done(function(result){
         alert(result)
     })

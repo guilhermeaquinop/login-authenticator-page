@@ -4,26 +4,25 @@
 
     include_once "conection.php";
 
-    $name = $_POST['name'];
+    $user = $_POST['user'];
     $email = $_POST['email'];
     $password = $_POST['password'];
 
 
-    $name = filter_input(INPUT_POST, 'name', FILTER_UNSAFE_RAW);
+    $user = filter_input(INPUT_POST, 'user', FILTER_UNSAFE_RAW);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $password = filter_input(INPUT_POST, 'password', FILTER_UNSAFE_RAW); // Criptografia
 
-    $sql = "SELECT id, name, email, password FROM records WHERE name = '$name';";
+    $sql = "SELECT * FROM logins WHERE email = '$email';";
     $exec_sql = mysqli_query($con, $sql);
     $row_result = mysqli_fetch_assoc($exec_sql);
 
     if (password_verify($password, $row_result['password'])) {
-        header("Location: login.php");
-
+       /*  header("Location: login.php"); */
+        echo json_encode("Welcome $user!");
     } else {
-        $_SESSION['msg'] = "<p style='color: red;'>Usuário ou senha inválidos! (1) <p>";
-        header("Location: index.php");
-
+        /* header("Location: index.php"); */
+        echo json_encode("Access denied!");
     }
 
 ?>  

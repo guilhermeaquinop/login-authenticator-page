@@ -18,7 +18,7 @@ session_start();
 
         <div class="modal__back" id="modal-back">
             <div class="modal__container" id="modal-container">
-                <form action="process.ph" method="post" class="form__singup">
+                <form action="register.php" method="post" class="form__singup">
                     <div id="modal-back-close" onclick="closeModal()">
                         <i class='bx bx-x'></i>
                     </div>
@@ -26,7 +26,7 @@ session_start();
                     <h1 class="form__title">Sing Up</h1>
 
                     <div class="form__div">
-                        <input type="text" name="name" class="form__input" id="name-singup" placeholder=" ">
+                        <input type="text" name="user" class="form__input" id="user-singup" placeholder=" ">
                         <label for="" class="form__label">User</label>
                     </div>
                     <div class="form__div">
@@ -34,7 +34,7 @@ session_start();
                         <label for="" class="form__label">E-mail</label>
                     </div>
                     <div class="form__div">
-                        <input type="password" name="password" class="form__input"id="password-singup" placeholder=" ">
+                        <input type="password" name="password" class="form__input" id="password-singup" placeholder=" ">
                         <label for="" class="form__label">Password</label>
                     </div>
 
@@ -45,19 +45,19 @@ session_start();
         
         <div class="home__container">
             <section class="l-form">
-                <form action="verifyLogin.php" method="POST" class="form__singin">
+                <form action="verify_login.php" method="POST" class="form__singin">
                     <h1 class="form__title">Sing In</h1>
 
                     <div class="form__div">
-                        <input type="text" name="name" class="form__input" placeholder=" ">
+                        <input type="text" name="user" class="form__input" id="user-singin" placeholder=" ">
                         <label for="" class="form__label">User</label>
                     </div>
                     <div class="form__div">
-                        <input type="email" name="email" class="form__input" placeholder=" ">
+                        <input type="email" name="email" class="form__input" id="email-singin" placeholder=" ">
                         <label for="" class="form__label">E-mail</label>
                     </div>
                     <div class="form__div">
-                        <input type="password" name="password"class="form__input" placeholder=" ">
+                        <input type="password" name="password" class="form__input" id="password-singin" placeholder=" ">
                         <label for="" class="form__label">Password</label>
                     </div>
                     
