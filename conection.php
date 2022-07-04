@@ -1,10 +1,10 @@
 <?php
 
-// Dados de acesso
-$serv = "localhost";
-$user = "root";
+// Insira os dados do banco de dados para realizar o teste.
+$serv = "";
+$user = "";
 $pass = "";
-$dbname = "login";
+$dbname = "";
 
 $con = mysqli_connect($serv, $user, $pass, $dbname);
 

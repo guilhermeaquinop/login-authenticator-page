@@ -67,13 +67,16 @@ a {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: #3157DE;
 }
 
 .form__singin {
     width: 22.5rem;
     padding: 4rem 2rem;
     border-radius: 1rem;
-    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(27, 28, 29, 0.556);
+    
 }
 .form__title {
     font-weight: 700;
